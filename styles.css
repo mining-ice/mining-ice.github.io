@@ -1,14 +1,53 @@
+/*intro page*/
+
 .p1 {
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-.p2 h2 {
+#_World {
+    padding: 3%;
+    border-radius: 20% / 50%;
+    font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+/*page 1*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container > div{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item2 {
+    grid-row-start: 5;
+    grid-row-end: 10;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.grid-container h2 {
     font-family: "Mirza", Arial, Helvetica, sans-serif;
 }
-.p2 h3 {
+.grid-container h3 {
     font-family: "Jacquarda Bastarda 9", Arial, Helvetica, sans-serif;
 }
-.p2 p {
+.grid-container p {
     font-family: "Nova Cut", Arial, Helvetica, sans-serif
 }
