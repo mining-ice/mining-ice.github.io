@@ -25,32 +25,44 @@
 <body>
     <div class="p1">
         <div class="header">
-            <h1>Loading User: Ethan_Jang</h1>
-            <h1>Sex = 'M'</h1>
+            <div class="info"></div>
+            <div class="info"></div>
             <h1>Class = 2027</h1>
-            <h1>Eye_Color = "Brown"</h1>
-            <h1>Showered_Yesterday = True</h1>
+            <h1>Eye_Color = "Brown"</h1> 
+            <h1><span class = "auto-type"></span></h1>
         </div>
         <br>
         <button id="_World">Dive Into My World</button>
     </div>
-
     <br>
     <br>
     <div class="p2">
-        <div class="grid-container">
-            <div class="item1"><h3>Me</h3></div>
-            <div class="item2"><h2>About</h2></div>
-        </div>
-        <div class="grid-container">
-            <div class="item1"><h3>Myself</h3></div>
-            <div class="item2"><h2>Projects</h2></div>
-        </div>
-        <div class="grid-container">
-            <div class="item1"><h3>I</h3></div>
-            <div class="item2"><h2>Interests</h2></div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Me</h3>
+                <h2>About</h2>
+            </div>
+            <div class="flex-item">
+                <h3>Myself</h3>
+                <h2>Projects</h2>
+            </div>
+            <div class="flex-item">
+                <h3>I</h3>
+                <h2>Interests</h2>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+    
+    <!--Header Animation-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Showered_Yesterday = True"],
+            typeSpeed: 75,
+            backSpeed: 75,
+            loop: false
+        })
+    </script>
 </body>
 </html>
