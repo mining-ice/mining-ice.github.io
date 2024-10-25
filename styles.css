@@ -1,4 +1,4 @@
-/*intro page*/
+/*General Page Formatting*/
 *{
     margin: 0;
     padding: 0;
@@ -7,15 +7,26 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    height: 100%;
 }
 
-.header {
+/*intro page*/
+.p1 {
+    background-color: #8bf7ff;
+    background-image: linear-gradient(white, white, white, #ff8b18);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info {
     width: 100%;
-    height: 100vh;
+    height: 15vh;
 
     padding: 20px;
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+    font-size: 50px;
 
     display: flex;
     flex-direction: column;
@@ -25,51 +36,117 @@ body {
 
 
 #_World {
-    padding: 3%;
-    border-radius: 20% / 50%;
+    padding: 2%;
+    border-radius: 200px / 150px;
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
     font-size: large;
     display: block;
     margin: 0 auto;
+
+    background-color: #d5d8dc; /*for browsers that don't support gradients*/
+    background-image: linear-gradient(#d5d8dc, #ffe3c7);
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    -ms-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+#_World:hover {
+    color: white;
+    background-image: linear-gradient(#212f3d, #fe9225);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /*page 1*/
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.p2 {
+    background-image: linear-gradient(#fe9225, #6ab4ff);
 }
 
-.flex-container::after {
-    content: "";
-    clear: both;
-    display: block;
+.desc,
+.desc *,
+.desc :after,
+.desc :before,
+.desc:after,
+.desc:before {
+  border: 1 solid;
+  box-sizing: border-box;
+}
+.desc {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.desc:disabled {
+  cursor: default;
+}
+.desc:-moz-focusring {
+  outline: auto;
+}
+.desc svg {
+  display: block;
+  vertical-align: middle;
+}
+.desc [hidden] {
+  display: none;
+}
+.desc {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+  -webkit-mask-image: none;
+  outline: 1px solid #fff;
+  padding: 20px 45px;
+  transition: border-width 0.2s;
+}
+.desc:hover {
+  border-width: 8px;
 }
 
-.flex-item {
-    width: 500px;
-    height: 150px;
+.descButtonGrid {
+    display: grid;
+}
+
+.circle {
     background-color: #8bf7ff;
-    margin: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 100px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
 }
 
-.flex-item h2 {
-    font-family: "Mirza", Arial, Helvetica, sans-serif;
-    font-size: 60px;
-    align-items: left;
-}
-
-.flex-item h3 {
-    font-family: "Jacquarda Bastarda 9", Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    align-items: right;
-}
-
-.grid-container p {
+.circle h2 {
     font-family: "Nova Cut", Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
